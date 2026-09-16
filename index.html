@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>My Calculator</h1>
+    </header>
+
+    <main>
+        
+        <div id="display">
+            <div id="calculations">
+                <span></span>
+            </div>
+            <div id="resultDisplay">
+                <span> </span>
+            </div>
+        </div>
+
+        <div id="Buttons">
+            <div id="numbers">
+                <button class="btns" id="One" onclick="Buttons('1')">1</button>
+                <button class="btns" id="Two" onclick="Buttons('2')">2</button>
+                <button class="btns" id="Three" onclick="Buttons('3')">3</button>
+                <button class="btns" id="Four" onclick="Buttons('4')">4</button>
+                <button class="btns" id="Five" onclick="Buttons('5')">5</button>
+                <button class="btns" id="Six" onclick="Buttons('6')">6</button>
+                <button class="btns" id="Seven" onclick="Buttons('7')">7</button>
+                <button class="btns" id="Eight" onclick="Buttons('8')">8</button>
+                <button class="btns" id="Nine" onclick="Buttons('9')">9</button>
+                <button class="btns" id="Zero" onclick="Buttons('0')">0</button>
+                <button class="btns" id="Clear" onclick="Clear()">C</button>
+                <button class="btns" id="Backspace" onclick="Backspace()">⌫</button>
+            </div>
+            <div id="Operators">
+                <button class="btns" id="Add" onclick="Buttons('+')">+</button>
+                <button class="btns" id="Subtract" onclick="Buttons('-')">-</button>
+                <button class="btns" id="Multiply" onclick="Buttons('*')">*</button>
+                <button class="btns" id="Divide" onclick="Buttons('/')">/</button>
+                <button class="btns" id="Decimal" onclick="Buttons('.')">.</button>
+                <button class="btns" id="Equals" onclick="calculate()">=</button>
+                
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Calculator. All rights reserved.</p>
+    </footer>
+    <script src="myScript.js"></script>
+</body>
+</html>
