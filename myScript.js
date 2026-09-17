@@ -3,13 +3,20 @@ const calculations = document.getElementById('calculations')
 const result = document.getElementById('resultDisplay')
 
 
-function calculate(){ 
+function calculate() { 
+
     console.log(calculations.textContent)
-    let answer = eval(calculations.textContent)
-    result.textContent = ''
-    result.textContent += '= ' + answer
+
+    let answer = Math.round(eval(calculations.textContent) * 100) / 100
+
+    // Use scientific notation for numbers >= 10^5
+    if (Math.abs(answer) >= 100000) {
+        answer = answer.toExponential(2)
+    }
+
+    result.textContent = '= ' + answer
+
     result.style.fontSize = '50px'
-    
 }
 
 function Buttons(num){
