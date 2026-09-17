@@ -17,11 +17,17 @@ function calculate() {
     result.textContent = '= ' + answer
 
     result.style.fontSize = '50px'
+    let prevAnswer = answer
 }
 
 function Buttons(num){
-    console.log(`${num} button clicked`)
-    calculations.textContent += num
+    if (num === 'Ans') {
+        console.log('Ans button clicked')
+        calculations.textContent += result.textContent.slice(2) // Append the previous answer without the '= ' prefix
+    } else {
+        console.log(`${num} button clicked`)
+        calculations.textContent += num
+    }
 }
 
 function Backspace(){

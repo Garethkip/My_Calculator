@@ -38,13 +38,13 @@ main{
 #calculations{ 
     font-size: 30px;
     color: #faf7f7;
-    border: 1px solid #f3f0f0;
+    /* border: 1px solid #f3f0f0; */
 }
 
 #resultDisplay{    
     font-size: 30px;
     color: #faf7f7;  
-    border: 1px solid #faf8f8; 
+    /* border: 1px solid #faf8f8;  */
     text-align: end;
 }
 
@@ -73,7 +73,12 @@ main{
 }
 
 #Operators>button{
-    font-size: 50px;
+    font-size: 40px;
+}
+
+#Operators>#Answer{
+    color: #030303;
+    font-size: 30px;
 }
 
 .btns{
