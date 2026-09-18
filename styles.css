@@ -119,6 +119,14 @@ main{
     color: #faf7f7;
 }
 
+footer{
+    color: #faf7f7;
+    text-align: center;
+    background-color: #1e3097;
+    padding: 10px;
+    border-top: 1px solid #000; 
+}
+
 /* when screen becomes small */
 @media (max-width: 600px) {
     main {
