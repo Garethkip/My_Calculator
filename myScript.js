@@ -3,6 +3,9 @@ const calculations = document.getElementById('calculations')
 const result = document.getElementById('resultDisplay')
 let answer = 0
 let prevAnswer = localStorage.getItem('prevAnswer')
+let isOn = false
+calculations.textContent = `Press 'AC' to turn on caculator`
+
 
 function calculate() { 
     console.log(calculations.textContent)
@@ -30,24 +33,50 @@ function calculate() {
 }
 
 function Buttons(num){
-    if (num === 'Ans') {
-        console.log('Ans button clicked')
-        calculations.textContent += 'Ans'
-    } else {
+    if (isOn){
         console.log(`${num} button clicked`)
         calculations.textContent += num
     }
 }
 
 function Backspace(){
-    console.log('Backspace button clicked')
-    calculations.textContent = calculations.textContent.slice(0, -1)
+    if(isOn){
+        console.log('Backspace button clicked')
+        calculations.textContent = calculations.textContent.slice(0, -1)
+    }
 }
 
 function Clear(){
-    console.log('Clear button clicked')
-    calculations.textContent = ''
-    result.textContent = ''
+    if(isOn){
+        console.log('Clear button clicked')
+        calculations.textContent = ''
+        result.textContent = ''
+    }
+}
+
+
+function OnOff(num) {
+
+    if (num === 'AC' && isOn) {
+        console.log('AC button clicked: Turning calculator off')
+        calculations.textContent = `Press 'AC' to turn on caculator`
+        result.textContent = ''
+        localStorage.removeItem('prevAnswer')
+        prevAnswer = null
+        isOn = false
+        display.style.backgroundColor = '#080808'
+        
+    }else if (num === 'AC' && !isOn) {
+        console.log('AC button clicked: Turning calculator back on')
+        calculations.textContent = ''
+        result.textContent = ''
+        localStorage.removeItem('prevAnswer')
+        prevAnswer = null
+        isOn = true
+        display.style.backgroundColor = '#3f3e3e'
+
+        
+    }   
 }
 
 
